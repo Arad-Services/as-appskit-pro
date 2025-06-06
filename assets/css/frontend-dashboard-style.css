@@ -1,0 +1,109 @@
+/*
+ * as-appskit-pro Frontend Dashboard Stylesheet
+ * Custom styles for /as-appskit-admin and /as-appskit-dashboard
+ * @since 1.0.0
+ */
+
+body.as-appskit-pro-frontend-dashboard-body {
+    background-color: #f8f9fa; /* Light grey background for dashboards */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background-color: #343a40 !important; /* Dark background */
+    color: #fff;
+}
+
+.sidebar .sidebar-sticky {
+    height: calc(100vh - 48px);
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents */
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #ced4da;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    background-color: #007bff; /* Primary blue for active */
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: #fff;
+}
+
+.sidebar .nav-link:hover {
+    color: #fff;
+    background-color: #495057;
+}
+
+/* Main Content Area */
+main.col-md-9 {
+    padding-top: 20px; /* Space from top */
+}
+
+.dashboard-section {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 2rem;
+}
+
+.dashboard-section h3 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+/* App Editor Specific Styles */
+.editor-dashboard #editorSidebar {
+    background-color: #343a40 !important; /* Darker sidebar for editor */
+}
+.editor-dashboard .editor-canvas {
+    background-color: #f0f2f5; /* Lighter background for editor canvas */
+}
+
+.module-slider {
+    white-space: nowrap; /* Keep items in a single line */
+}
+
+.module-item {
+    display: inline-block; /* Allow items to be in a row */
+    vertical-align: top;
+    cursor: grab; /* Indicate draggable */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 48px; /* Offset by navbar height if there's a mobile navbar */
+    position: static;
+    height: auto;
+  }
+  main.col-md-9 {
+    margin-left: 0 !important;
+  }
+}

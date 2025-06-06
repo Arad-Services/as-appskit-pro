@@ -1,0 +1,316 @@
+/*
+ * Admin Styles for as-appskit-pro Plugin (Version 4.0.1)
+ *
+ * This file contains styles for:
+ * - Network Admin Dashboard pages
+ * - Custom Post Type edit screens (AppKits)
+ * - General admin UI elements
+ * - New Global Settings Page
+ */
+
+/* Basic Card Styling for Admin Pages */
+.wrap .card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.wrap .card h2.title {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Stat Boxes for Dashboard */
+.stat-box {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stat-box h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.stat-box .stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0073aa; /* WordPress blue */
+    margin-bottom: 0;
+}
+
+/* Quick Action Buttons */
+.button-hero {
+    min-height: 40px;
+    line-height: 38px;
+    padding: 0 20px;
+    font-size: 1.2em;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Meta Box Styling (for AppKit CPT) */
+.as-appskit-pro-media-field {
+    width: calc(100% - 140px); /* Adjust width to fit button */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.as-appskit-pro-upload-button {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* Color Picker input */
+.as-appskit-pro-color-picker {
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Code Mirror like styling for JSON textarea */
+textarea.code {
+    font-family: monospace;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Onboarding Specific Styles (shared with public/views/onboarding-style.css if applicable) */
+.as-appskit-pro-landing-page .container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.as-appskit-pro-landing-page .features-grid .card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.as-appskit-pro-landing-page .features-grid .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Common onboarding step styles (for both admin partials and public views) */
+.as-appskit-onboarding-step-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.app-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.template-card, .layout-card {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.template-card .card, .layout-card .card {
+    height: 100%; /* Ensure cards fill height */
+    border: none; /* Remove inner card border */
+}
+
+.template-card img.card-img-top, .layout-card img.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 150px; /* Fixed height for image previews */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+}
+
+
+.template-card.selected, .layout-card.selected {
+    border: 3px solid #0073aa; /* WordPress blue */
+    box-shadow: 0 0 15px rgba(0, 115, 170, 0.3);
+}
+
+.template-card:hover, .layout-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    margin-top: 30px;
+}
+
+.navigation-buttons .btn {
+    min-width: 150px;
+}
+
+.navigation-buttons .btn.me-2 {
+    margin-right: 0.5rem !important; /* Ensure spacing if not handled by col-md-X classes */
+}
+
+
+/* --- Step 3: Module Editor Specific Styles --- */
+.modules-palette {
+    /* Styles for the draggable module list */
+}
+
+.module-item {
+    background-color: #e9ecef; /* Light gray background */
+    border: 1px solid #dee2e6; /* Bootstrap border color */
+    color: #495057; /* Darker text */
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.module-item:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-1px);
+}
+
+.module-item.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.module-item.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.module-item i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.app-builder-canvas {
+    min-height: 450px; /* Increased height for better visual space */
+    border: 2px dashed #0073aa; /* WordPress blue dashed border */
+    background-color: #fdfdfe; /* Very light background */
+    display: flex;
+    flex-direction: column; /* Stack dropped modules vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative; /* For placeholder positioning */
+}
+
+.app-builder-canvas .placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6c757d;
+    font-style: italic;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.dropped-module-item {
+    background-color: #d1ecf1; /* Light blue alert */
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%; /* Take full width of canvas */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    cursor: grab; /* Indicates it's draggable */
+}
+
+.dropped-module-item .btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+
+.app-preview iframe {
+    width: 100%;
+    min-height: 500px; /* Ensure sufficient height for preview */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.placeholder-chart {
+    height: 150px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* --- Step 4: Publish Specific Styles --- */
+#publish-app-section .card-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#publish-app-section .btn-lg {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    width: 100%; /* Make buttons full width in columns */
+}
+
+/* New: Tab styles for settings page */
+.nav-tab-wrapper {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0;
+}
+
+.nav-tab {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #555;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-right: -1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-tab-active, .nav-tab-active:hover {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    color: #000;
+}
+
+.nav-tab:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
